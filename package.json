@@ -1,6 +1,6 @@
 {
-  "name": "@dream11/react-native-sensors",
-  "version": "1.0.0",
+  "name": "react-native-sensors",
+  "version": "5.0.0-rc4",
   "description": "A developer friendly approach for sensors in react-native",
   "scripts": {
     "contributor:add": "all-contributors add",
@@ -13,15 +13,16 @@
     "travis-deploy-once": "travis-deploy-once"
   },
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:dream11/react-native-sensors.git"
-  },
-  "homepage": "https://github.com/bishalfan/react-native-sensors",
+  "repository": "git@github.com:react-native-sensors/react-native-sensors.git",
+  "homepage": "https://github.com/react-native-sensors/react-native-sensors",
   "keywords": [
     "react-native"
   ],
-  "author": "Fancode",
+  "author": {
+    "name": "Daniel Schmidt",
+    "email": "danielmschmidt92@gmail.com",
+    "url": "http://danielmschmidt.de"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
@@ -104,8 +105,5 @@
     "semantic-release": "15.13.16",
     "travis-deploy-once": "5.0.11"
   },
-  "types": "./index.d.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+  "types": "./index.d.ts"
 }

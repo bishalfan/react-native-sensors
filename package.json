@@ -1,0 +1,111 @@
+{
+  "name": "@dream11/react-native-sensors",
+  "version": "1.0.0",
+  "description": "A developer friendly approach for sensors in react-native",
+  "scripts": {
+    "contributor:add": "all-contributors add",
+    "postcontributor:add": "npm run contributor:generate",
+    "contributor:generate": "all-contributors generate",
+    "postcontributor:generate": "npm run format",
+    "test": "jest",
+    "format": "prettier --loglevel=warn --write $(npx jest --listTests)",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dream11/react-native-sensors.git"
+  },
+  "homepage": "https://github.com/bishalfan/react-native-sensors",
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Fancode",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "jest": {
+    "timers": "fake",
+    "projects": [
+      {
+        "displayName": "Unit",
+        "testEnvironment": "node",
+        "testPathIgnorePatterns": [
+          "tests/*"
+        ],
+        "timers": "fake"
+      },
+      {
+        "displayName": "Prettier",
+        "runner": "jest-runner-prettier",
+        "moduleFileExtensions": [
+          "js",
+          "jsx",
+          "json",
+          "ts",
+          "tsx",
+          "css",
+          "less",
+          "scss",
+          "graphql",
+          "md",
+          "markdown"
+        ],
+        "testMatch": [
+          "**/*.js",
+          "**/*.jsx",
+          "**/*.json",
+          "**/*.ts",
+          "**/*.tsx",
+          "**/*.css",
+          "**/*.less",
+          "**/*.scss",
+          "**/*.graphql",
+          "**/*.md",
+          "**/*.markdown"
+        ],
+        "testPathIgnorePatterns": [
+          "package.json",
+          "package-lock.json"
+        ]
+      }
+    ]
+  },
+  "babel": {
+    "presets": [
+      "react-native"
+    ]
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": ">=0.39.0",
+    "prop-types": "^15.6.0"
+  },
+  "dependencies": {
+    "rxjs": ">= 6"
+  },
+  "devDependencies": {
+    "all-contributors-cli": "6.1.2",
+    "babel-core": "6.26.3",
+    "babel-jest": "24.1.0",
+    "babel-preset-react-native": "4.0.0",
+    "husky": "4.2.3",
+    "jest": "24.1.0",
+    "jest-runner-prettier": "0.2.6",
+    "prettier": "1.12.1",
+    "pretty-quick": "2.0.1",
+    "react": "16.8.4",
+    "react-native": "0.57.7",
+    "regenerator-runtime": "0.13.1",
+    "rxjs-marbles": "5.0.0",
+    "semantic-release": "15.13.16",
+    "travis-deploy-once": "5.0.11"
+  },
+  "types": "./index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
